@@ -4,18 +4,58 @@ block content
   div.cointener-fluid
     div.row
       h1 Jarvis
+      
     div.row
       h2 Adverts test server
+      
     div.row
       ul.nav.nav-tabs
         li.active(role="presentation")
-          a(href="#") Prerolls
+          a(href="#Prerolls") Prerolls
         li(role="presentation")
-          a(href="#") Midrolls
+          a(href="#Midrolls") Midrolls
         li(role="presentation")
-          a(href="#") Postrolls
+          a(href="#Postrolls") Postrolls
           
       div.tab-content
-        div.tab-pane.active(role="tabpanel", id="Prerolls") Pre config
-        div.tab-pane(role="tabpanel", id="Midrolls") Mid config
-        div.tab-pane(role="tabpanel", id="Postrolls") Post config
+        div.tab-pane.active(role="tabpanel", id="Prerolls")
+          h3 Prerolls config
+          form
+            div.form-group
+              label Włączone? 
+                input(type='checkbox')
+            div.form-group    
+              label Uszkodzone?  
+                input(type='checkbox')  
+            div.form-group
+              label Ilosc? 
+              input.form-control(type='text', placeholder='2', id='prerolls-number')
+              
+        div.tab-pane(role="tabpanel", id="Midrolls")
+          h3 Midrolls config
+          form
+            div.form-group
+              label Włączone? 
+                input(type='checkbox')
+            div.form-group    
+              label Uszkodzone?  
+                input(type='checkbox')  
+            div.form-group
+              label Ilosc? 
+              input.form-control(type='text', placeholder='2', id='prerolls-number')
+              
+        div.tab-pane(role="tabpanel", id="Postrolls")
+          h3 Postrolls config
+          form
+            div.form-group
+              label Włączone? 
+                input(type='checkbox')
+            div.form-group    
+              label Uszkodzone?  
+                input(type='checkbox')  
+            div.form-group
+              label Ilosc? 
+              input.form-control(type='text', placeholder='2', id='prerolls-number')
+              
+    div.row.text-right
+      button.btn.btn-primary.btn-lg(type="button") Save

@@ -1,8 +1,9 @@
 $(document).ready(function () {
-  console.log('dsdadadsa');
-  $('a').click(function (e) {
-    console.log('dsdadadsa2');
+  $('.nav li a').click(function (e) {
     e.preventDefault();
+    // var tabID = $(this).attr('href').replace('#/', '');
+    // debugger;
+    // $('#' + tabID).tab('show');
     $(this).tab('show');
   });
 });
