@@ -1,5 +1,21 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.cointener-fluid
+    div.row
+      h1 Jarvis
+    div.row
+      h2 Adverts test server
+    div.row
+      ul.nav.nav-tabs
+        li.active(role="presentation")
+          a(href="#") Prerolls
+        li(role="presentation")
+          a(href="#") Midrolls
+        li(role="presentation")
+          a(href="#") Postrolls
+          
+      div.tab-content
+        div.tab-pane.active(role="tabpanel", id="Prerolls") Pre config
+        div.tab-pane(role="tabpanel", id="Midrolls") Mid config
+        div.tab-pane(role="tabpanel", id="Postrolls") Post config
