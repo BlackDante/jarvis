@@ -22,8 +22,11 @@ block content
           h3 Prerolls config
           form
             div.form-group
-              label Włączone? 
-                input(type='checkbox', id="Prerolls_active")
+              label Włączone?
+              if prerolls.active
+                input(type='checkbox', id="Prerolls_active", checked="true")                    
+              else 
+                input(type='checkbox', id="Prerolls_active", checked="false")
             div.form-group    
               label Uszkodzone?  
                 input(type='checkbox', id='Prerolls_damage')  

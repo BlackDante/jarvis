@@ -1,21 +1,29 @@
 var express = require('express');
 var router = express.Router();
-var mongodb = require('mongodb');
-var server = new mongodb.Server('127.0.0.1', 27017, {});
-var client = new mongodb.Db('jarvis', server, { w:1 });
 
 /* GET home page. */
 router.post('/', function(req, res, next) {
   // Get post vars
   var body  = req.body;
+  var client = req.db;
 
   client.open(function (err) {
     if (err) throw err;
     client.collection('jarvis', function (err, collection) {
-        if (err) throw err;
-        collection.insert({
-            dasdad: 'dsadsadadadas'
-        });
+      if (err) throw err;
+      collection.insert({
+        type: 'Prerolls',
+        data: body.Prerolls
+      });
+      collection.insert({
+        type: 'Postrolls',
+        data: body.Postrolls
+      });
+      collection.insert({
+        data: 'Midrolls',
+        Midrolls: body.Midrolls
+      });
+      client.close();
     });
   });
 

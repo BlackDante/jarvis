@@ -14,9 +14,21 @@ $(document).ready(function () {
     var groups = ['Prerolls', 'Midrolls', 'Postrolls'];
     var params = ['active', 'damage', 'number'];
     var data = {
-      Prerolls: {},
-      Midrolls: {},
-      Postrolls: {}
+      Prerolls: {
+        active: false,
+        damage: false,
+        number: 0
+      },
+      Midrolls: {
+        active: false,
+        damage: false,
+        number: 0
+      },
+      Postrolls: {
+        active: false,
+        damage: false,
+        number: 0
+      }
     };
 
     // Get all data.
@@ -35,6 +47,7 @@ $(document).ready(function () {
       });
     });
 
+    // $.post('/save', JSON.stringify(data));
     $.post('/save', data);
   });
 });
