@@ -23,39 +23,39 @@ block content
           form
             div.form-group
               label Włączone? 
-                input(type='checkbox')
+                input(type='checkbox', id="Prerolls_active")
             div.form-group    
               label Uszkodzone?  
-                input(type='checkbox')  
+                input(type='checkbox', id='Prerolls_damage')  
             div.form-group
               label Ilosc? 
-              input.form-control(type='number', placeholder='2', id='prerolls-number')
+              input.form-control(type='number', placeholder='2', id='Prerolls_number')
               
         div.tab-pane(role="tabpanel", id="Midrolls")
           h3 Midrolls config
           form
             div.form-group
               label Włączone? 
-                input(type='checkbox')
+                input(type='checkbox', id="Midrolls_active")
             div.form-group    
               label Uszkodzone?  
-                input(type='checkbox')  
+                input(type='checkbox', id="Midrolls_damage")  
             div.form-group
               label Ilosc? 
-              input.form-control(type='number', placeholder='2', id='prerolls-number')
+              input.form-control(type='number', placeholder='2', id='Midrolls_number')
               
         div.tab-pane(role="tabpanel", id="Postrolls")
           h3 Postrolls config
           form
             div.form-group
               label Włączone? 
-                input(type='checkbox')
+                input(type='checkbox', id="Postrolls_active")
             div.form-group    
               label Uszkodzone?  
-                input(type='checkbox')  
+                input(type='checkbox', id="Postrolls_damage")  
             div.form-group
               label Ilosc? 
-              input.form-control(type='number', placeholder='2', id='prerolls-number')
+              input.form-control(type='number', placeholder='2', id='Postrolls_number')
               
     div.row.text-right
       button.btn.btn-primary.btn-lg(type="button") Save
